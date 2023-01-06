@@ -1,18 +1,14 @@
 <script setup lang="ts">
 import Search from "./search/index.vue";
 import Notice from "./notice/index.vue";
-import mixNav from "./sidebar/mixNav.vue";
 import { useNav } from "@/layout/hooks/useNav";
 import Breadcrumb from "./sidebar/breadCrumb.vue";
-import topCollapse from "./sidebar/topCollapse.vue";
 import LogoutCircleRLine from "@iconify-icons/ri/logout-circle-r-line";
-import Setting from "@iconify-icons/ri/settings-3-line";
 
 const {
   layout,
   device,
   logout,
-  onPanel,
   pureApp,
   username,
   avatarsStyle,
@@ -64,13 +60,13 @@ const {
           </el-dropdown-menu>
         </template>
       </el-dropdown>
-      <span
-        class="set-icon navbar-bg-hover"
-        title="打开项目配置"
-        @click="onPanel"
-      >
-        <IconifyIconOffline :icon="Setting" />
-      </span>
+      <!--      <span-->
+      <!--        class="set-icon navbar-bg-hover"-->
+      <!--        title="打开项目配置"-->
+      <!--        @click="onPanel"-->
+      <!--      >-->
+      <!--        <IconifyIconOffline :icon="Setting" />-->
+      <!--      </span>-->
     </div>
   </div>
 </template>

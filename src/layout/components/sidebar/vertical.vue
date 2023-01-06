@@ -1,9 +1,7 @@
 <script setup lang="ts">
-import Logo from "./logo.vue";
 import { useRoute } from "vue-router";
 import { emitter } from "@/utils/mitt";
 import SidebarItem from "./sidebarItem.vue";
-import leftCollapse from "./leftCollapse.vue";
 import { useNav } from "@/layout/hooks/useNav";
 import { storageLocal } from "@pureadmin/utils";
 import { ref, computed, watch, onBeforeMount } from "vue";
@@ -64,7 +62,7 @@ watch(
     v-loading="menuData.length === 0"
     :class="['sidebar-container', showLogo ? 'has-logo' : '']"
   >
-    <Logo v-if="showLogo" :collapse="isCollapse" />
+    <!--    <Logo v-if="showLogo" :collapse="isCollapse" />-->
     <el-scrollbar
       wrap-class="scrollbar-wrapper"
       :class="[device === 'mobile' ? 'mobile' : 'pc']"

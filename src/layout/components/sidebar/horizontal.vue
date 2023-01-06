@@ -6,7 +6,6 @@ import SidebarItem from "./sidebarItem.vue";
 import { useNav } from "@/layout/hooks/useNav";
 import { usePermissionStoreHook } from "@/store/modules/permission";
 import LogoutCircleRLine from "@iconify-icons/ri/logout-circle-r-line";
-import Setting from "@iconify-icons/ri/settings-3-line";
 
 const menuRef = ref();
 
@@ -16,7 +15,6 @@ const {
   routers,
   logout,
   backHome,
-  onPanel,
   menuSelect,
   username,
   avatarsStyle
@@ -40,7 +38,7 @@ watch(
     class="horizontal-header"
   >
     <div class="horizontal-header-left" @click="backHome">
-      <FontIcon icon="team-iconlogo" svg style="width: 35px; height: 35px" />
+      <!--      <FontIcon icon="team-iconlogo" svg style="width: 35px; height: 35px" />-->
       <h4>{{ title }}</h4>
     </div>
     <el-menu
@@ -84,13 +82,13 @@ watch(
           </el-dropdown-menu>
         </template>
       </el-dropdown>
-      <span
-        class="set-icon navbar-bg-hover"
-        title="打开项目配置"
-        @click="onPanel"
-      >
-        <IconifyIconOffline :icon="Setting" />
-      </span>
+      <!--      <span-->
+      <!--        class="set-icon navbar-bg-hover"-->
+      <!--        title="打开项目配置"-->
+      <!--        @click="onPanel"-->
+      <!--      >-->
+      <!--        <IconifyIconOffline :icon="Setting" />-->
+      <!--      </span>-->
     </div>
   </div>
 </template>
